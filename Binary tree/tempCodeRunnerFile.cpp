@@ -1,0 +1,2 @@
+
+		isSubtree(T->right, S);
