@@ -1,27 +1,20 @@
 #include<iostream>
 using namespace std;
-int power(int a,int b){
-    if(b==0){ 
+
+int powerr(int n , int pow){
+    if(pow<=0){
         return 1;
     }
-    if(b==1){ 
-        return a;
-    }
-    // recrsive call
-
-    int ans = power(a,b/2);
-    //if b is even
-    if(b%2==0){
-        return ans*ans;
-    }
-    //if b is odd
-    else{
-        return a*ans*ans;
-    }
-        
+    
+    int ans =  powerr(n , pow-1);
+    int main = n*ans;
+    return main;
+    
 }
+
 int main(){
-    int a = 2;
-    int b = 16;
-    cout<<"a power b ="<<power(a,b);
+    int n = 2;
+    int pow = 5;
+    int ans = powerr(n ,pow);
+    cout<<ans;
 }

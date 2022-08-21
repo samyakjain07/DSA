@@ -1,20 +1,18 @@
 #include<iostream>
+#include<string>
 using namespace std;
 
-void reversee(string& name,int i ,int j){
-    if(i>j){
+void reversee(string s){
+
+    if(s.length()==0){
         return;
     }
-    swap(name[i],name[j]);
-    i++;
-    j--;
-    reversee(name,i,j);
+    string restOfString = s.substr(1);
+    reversee(restOfString);
+    cout<<s[0];
 }
 
-
-
 int main(){
-    string name = "Samyak";
-    reversee(name,0,name.length()-1);
-    cout<<name;
+    string s = "binod";
+    reversee(s);
 }
