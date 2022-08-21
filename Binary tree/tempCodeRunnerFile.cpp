@@ -1,2 +1,5 @@
-
-		isSubtree(T->right, S);
+Node(int val){
+        data = val;
+        left = NULL;
+        right = NULL;
+    }
